@@ -1,0 +1,12 @@
+<script>
+	function getStr(){
+		const day=Math.floor((new Date).getTime()/1000/3600/24);
+		const encode_num=day*29%(26*26)+141;
+		const high=encode_num/26;
+		const low=encode_num%26;
+		const charA='A'.charCodeAt(0);
+		const str=String.fromCharCode(high+charA)+String.fromCharCode(low+charA);
+		return str;
+	}
+	document.write(getStr());
+</script>
